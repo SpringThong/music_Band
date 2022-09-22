@@ -1,0 +1,355 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+   font-family:sans-serif;
+}
+
+ #header{
+    background-color: black;
+    height: 46px;
+    z-index: 1; /* giúp cho hình không đè header khi mà làm xong cái dòng chữ chicago */
+    /* đoạn này giúp cho header bám sát vào mép, có cuộn cũng ko mất */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;   
+
+   }
+   #navi>li {
+      display: inline-block;
+      line-height: 46px;
+      font-size: 22px;
+      position: relative;  
+   }
+   
+   #navi>li>a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0 24px;
+   }
+   #navi>li:hover>a{
+      background-color: #ccc;
+      display: inline-block; 
+   }
+   #navi li:hover .morenavi {
+      display: block; /* cái này là hiện*/
+   }
+   /* bắt đầu phần này là làm nút search và mũi tên xuống*/
+   #navi .navi-up {
+      font-size: 14px;
+   }
+   #header #sreach-button:hover{
+      background-color:#f44336;
+   }
+   #header #sreach-button{
+      float: right;
+      padding: 0 18.5px;
+      cursor: pointer; /* ngón tay khi di vào cái nút nào nhấn dc*/
+      
+   }
+   #header .sreach-icon {
+      color: white;
+      font-size: 25px;
+      line-height: 46px;
+     
+   }
+   /* kết thúc nè*/
+   #navi {
+      display: inline-block;
+   }
+   .morenavi{
+      display: none;
+      position: absolute;
+      background-color: white;
+      list-style: none; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      min-width: 160px;
+   }
+   .morenavi>li>a{
+      text-decoration: none;
+      padding: 0 16px;
+      color: black;
+   }
+   .morenavi>li{
+      line-height: 38px;
+      
+   }
+   .morenavi>li:hover>a{
+      background-color: #ccc;
+      display: block;
+      }
+   #slider{
+      position: relative;
+      margin-top: 46px;
+      padding-top: 50%; /* chiều rộng luôn bằng 50% của chiều dài*/
+      background: url(../img/slider/slider1.jpg) top center/cover no-repeat;;
+   }
+   #slider #text_content {
+      position: absolute;
+      bottom: 47px;
+      color: white;
+      /* left: 50%;
+      transform: translateX(-50%); */
+      /*width: 100%; */
+      right: 0%;  /* căn giữa chữ */
+      left: 0%;
+      text-align: center;
+   }
+   #slider .heading{
+      font-weight: 500;
+      font-size: 24px;
+   } 
+   #slider .text_info {
+      font-size: 15px;
+      margin-top: 25px;
+   }
+     #content {
+
+     }
+     #content .chung {
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 64px;
+      padding-bottom: 64px;
+     }
+     #content .chung .chung-heading {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: 4px;
+     }
+     #content .chung .chung-con-heading{
+      text-align: center;
+      font-style: italic;
+      font-size: 15px;
+      margin-top: 25px;
+      opacity: 0.6;
+     }
+     #content .chung .noidung{ 
+      margin-top: 30px;
+      text-align: justify; /* căn đều chữ 2 bên*/
+      font-size: 15px;
+      line-height: 1.5;
+     }
+     #content .name-list{
+      margin-top: 48px;
+      text-align: center;
+      overflow: hidden;
+     }
+    #content .name{
+      float: left;
+      width: 33.333333%;
+   }
+   #content .namep{
+      font-size: 15px;  
+   }
+   #content .pic{
+      margin-top: 15px;
+      width: 154px;
+      border-radius: 4px; /*bo góc ảnh*/
+   }
+   /* cha-tour*/
+   .cha-tour{
+      background-color: black;
+   }
+   .text-white{
+      color: white;
+   }
+   .tickets{
+   background-color: white;
+   margin-top: 40px;
+   list-style: none;
+   }
+   .tickets li{
+      font-size: 15px;
+      padding: 8px 16px;
+      border-bottom: 1px solid #ddd;
+      color: #757575;
+
+   }
+   .tickets .sold-out{
+
+      background-color: #f44336 ;
+      color: white;
+      margin: 0px 0px 0px 16px;
+      padding: 0px 8px;
+
+
+   }
+   .tickets .so3{
+      float: right;
+      background-color: black;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      color: white;
+      border-radius: 50%; /* màu đen hình tròn*/
+      line-height: 24px; /* căn giữa*/
+      margin-top: -3px;
+   }
+   /*Place*/
+     .diadiem1{
+      float: left; /* 3 hình nằm trên 1 hàng*/
+      width: 33.33333%; /*cho 3 hình nhỏ lại nằm trên 1 hàng*/
+      padding: 0px 8px;
+      
+     }
+      .img{
+      width: 100%; /*vừa vs thanh november*/
+      display: block;
+     }
+     .img:hover{
+      opacity: 0.5;
+     }
+     .clear{
+      clear: both;
+     }
+     .alldiadiem{     
+      margin-top: 32px;
+      margin-left: -8px;
+      margin-right: -8px;
+      padding-bottom: 48px;
+     }
+     .noidung1{
+      background-color: white;
+      padding: 16px;
+      font-size: 15px;
+     }
+    .noidien{
+      font-size: 15px;
+      font-weight: 6000;
+      margin-top: 15px;
+     }
+     .thoigian{
+      margin-top: 15px;
+      color: #757575;
+     }
+     .ghichu{
+      margin-top: 15px;
+      line-height: 1.4;
+     }
+     .buy{
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      display: inline-block;
+      margin-top: 16px;
+     }
+     .buy:hover{
+      background-color: #ccc;
+      color: black;
+     }
+     /*Modal-cái khung bấm nút buy*/
+     .modal{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      /*display: flex;*/
+      display: none;
+      align-items: center;
+      justify-content: center;
+     }
+     .modal.open{         
+      display: flex;                   
+     }                            /*class open này chỉ viết sẵn trong css, 
+     vì khi mình xài cái lệnh classlist.add (open) 
+     thì nó sẽ tự động thêm class .open có sẵn bên css vào trong class 
+     modal có sẵn bên html. thì khi đó nó sẽ khớp vs cái lệnh đã viết vào bên CSS*/
+     .modal-khung{
+      background-color: #fff;
+      width: 900px;
+      max-width: calc(100% - 32px);
+      min-height: 343px;
+      animation: modalfadein ease 1s;
+     }
+     .modal-header{
+      background-color: #009688;
+      font-size: 30px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: white;
+      height: 129px;
+     }
+     .ticket{
+      margin-left: 16px;
+     }
+     .modal-khung{
+      position: relative;
+     }
+     .modal-close{
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: white;
+      padding: 12px;
+      opacity: 0.6;
+     }
+     .modal-close:hover{
+      background-color: #ccc;
+      cursor: pointer;
+      opacity: 1;
+     }
+     .modal-body{
+      padding: 16px;
+     }
+     .modal-lablel{
+      display: block;
+      font-size: 15px;
+      margin-bottom: 12px;
+     }
+     .modal-input{
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      font-size: 15px;
+      margin-bottom: 24px;
+     }
+     .modal-email{
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      font-size: 15px;
+      }
+      .buy-ticket{
+      background-color: #009688;
+      font-size: 15px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 18px;
+      width: 100%;
+      margin: 16px 0px;
+      border: none; /*thuộc tính mờ đường viền */
+      }
+      .buy-ticket:hover{
+         background-color: #ccc;
+         color: black;
+      }
+      .modal-footer{
+         padding: 16px;
+         text-align: right;
+      }
+      .modal-footer a{
+         color:#2196F3 ;
+      }
+@keyframes modalfadein{
+   from {
+         transform: translateY(-140px);
+         opacity: 0;
+   }
+   to{
+         transform: translateY(0px);
+         opacity: 1;
+   }
+}
